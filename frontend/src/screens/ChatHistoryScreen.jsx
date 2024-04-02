@@ -8,7 +8,7 @@ const ChatHistoryScreen = () => {
     const [history] = useGetChatHistoryMutation();
 
     const fetchChats = () => {
-        fetch(`${import.meta.env.USERS_URL}/users/history`)
+        fetch(`/api/users/history`)
             .then(res => res.json())
             .then(data => setChats(data))
             .catch(err => console.log(err));
